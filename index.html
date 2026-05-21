@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AutoMotora | Tu próximo auto te espera</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ── NAVBAR ── -->
+  <nav>
+    <a href="#inicio" class="logo-area">
+      <img src="fotos\dugnfvc.png" height="44">
+      <img src="fotos\ATdug.png"  height="44">
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#autos">Autos disponibles</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+      <li><a href="#vende" class="nav-cta">Vende tu auto</a></li>
+    </ul>
+  </nav>
+
+  <!-- ── HERO ── -->
+  <section id="inicio">
+    <div class="hero-bg"></div>
+    <div class="hero-lines"></div>
+
+    <div class="hero-content">
+      <p class="hero-label">Tú concesionario de confianza</p>
+      <h1 class="hero-title">
+        Tu próximo
+        <span>auto</span>
+        te espera.
+      </h1>
+      <p class="hero-sub">
+        Los mejores vehículos seleccionados para ti. Nuevos, seminuevos y usados con respaldo garantizado.
+      </p>
+      <div class="hero-actions">
+        <a href="#autos" class="btn-primary">Ver autos disponibles</a>
+        <a href="#contacto" class="btn-ghost">Vende tu auto</a>
+      </div>
+    </div>
+    <img src="fotos\dugnf.png" class="logo-grande">
+    
+  </section>
+
+  <!-- ── AUTOS DISPONIBLES ── -->
+  <section id="autos">
+    <div class="section-header">
+      <div>
+        <p class="section-label">Catálogo</p>
+        <h2 class="section-title">Autos disponibles</h2>
+      </div>
+    </div>
+
+    <!-- Filtros -->
+    <div class="filters">
+      <button class="filter-btn active" onclick="filterCars('todos', this)">Todos</button>
+      <button class="filter-btn" onclick="filterCars('nuevo', this)">Nuevos</button>
+      <button class="filter-btn" onclick="filterCars('usado', this)">Usados</button>
+      <button class="filter-btn" onclick="filterCars('sedan', this)">Sedán</button>
+      <button class="filter-btn" onclick="filterCars('suv', this)">SUV</button>
+      <button class="filter-btn" onclick="filterCars('pickup', this)">Pickup</button>
+    </div>
+
+    <!-- Grid — generado por JS con datos de cars.js -->
+    <div class="cars-grid" id="carsGrid"></div>
+  </section>
+
+  <!-- ── VENDE TU AUTO ── -->
+  <section id="vende">
+    <div class="vende-box">
+      <div>
+        <p class="section-label">¿Quieres vender?</p>
+        <h2 class="vende-title">Vende tu auto<span>rápido y fácil.</span></h2>
+        <p class="vende-sub">
+          Cotizamos tu vehículo sin compromiso. Proceso 100% transparente,
+          pago inmediato y sin burocracia.
+        </p>
+        <a href="#contacto" class="btn-primary">Cotizar mi auto</a>
+      </div>
+
+      <ul class="vende-steps">
+        <li class="vende-step">
+          <span class="step-num">1</span>
+          Completa el formulario con los datos de tu auto.
+        </li>
+        <li class="vende-step">
+          <span class="step-num">2</span>
+          Revisamos la información y te entregamos una cotización.
+        </li>
+        <li class="vende-step">
+          <span class="step-num">3</span>
+          Acordamos precio y concretamos la venta con pago al instante.
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ── CONTACTO ── -->
+  <section id="contacto">
+    <div class="lado-izq-contacto">
+      <div class="section-header">
+        <div>
+          <p class="section-label">Estamos aquí</p>
+          <h2 class="section-title">Contacto</h2>
+        </div>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-detail">
+            <div class="contact-icon">📍</div>
+            <div class="contact-text">
+              <strong>Dirección</strong>
+              Av. Lomas de la corneta 6969, Talca, Maule.
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-icon">📞</div>
+            <div class="contact-text">
+              <strong>Teléfono</strong>
+              +56 9 6969 6969
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-icon">✉️</div>
+            <div class="contact-text">
+              <strong>Email</strong>
+              peneparaum@nzor.cl
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-icon">🕐</div>
+            <div class="contact-text">
+              <strong>Horario</strong>
+              Todos los días hasta la hora del pico
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-icon"><i class="fa-brands fa-whatsapp"></i></div>
+            <div class="contact-text">
+              <strong>WhatsApp</strong>
+              <a href="https://api.whatsapp.com/send?phone=56986627070&text=Hola%2C%20necesito%20agendar%20una%20visita%20para%20lavar%20mi%20veh%C3%ADculo.%20" class="whatsapp-btn">
+                  <p>Escribenos dando click aquí!</p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="contact-form">
+      <div class="form-row">
+        <div class="form-group">
+          <label>Nombre</label>
+          <input type="text" placeholder="Tu nombre">
+        </div>
+        <div class="form-group">
+          <label>Teléfono</label>
+          <input type="tel" placeholder="+56 9 ···">
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" placeholder="tu@correo.cl">
+      </div>
+      <div class="form-group">
+        <label>¿En qué te podemos ayudar?</label>
+        <select>
+          <option>Consulta sobre un auto</option>
+          <option>Quiero vender mi auto</option>
+          <option>Financiamiento</option>
+          <option>Otro</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Mensaje</label>
+        <textarea placeholder="Cuéntanos más..."></textarea>
+      </div>
+      <button class="btn-submit">Enviar mensaje</button>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <span class="footer-copy">© 2026 AutoMotoras DUG · Todos los derechos reservados</span>
+    <div class="footer-links">
+      <a href="#">Términos y condiciones</a>
+      <a href="#">Política de privacidad</a>
+      <a href="https://www.instagram.com/carwash_talca/">Instagram</a>
+    </div>
+  </footer>
+
+  <!-- ── DATOS DE AUTOS (bosquejo — aquí va tu base de datos) ── -->
+  <script src="main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Detalle del auto | AutoMotora</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <a href="index.html#inicio" class="logo-area">
+      <img src="fotos\dugnfvc.png" height="44">
+      <img src="fotos\ATdug.png"  height="44">
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html#inicio">Inicio</a></li>
+      <li><a href="index.html#autos">Autos disponibles</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+      <li><a href="index.html#vende" class="nav-cta">Vende tu auto</a></li>
+    </ul>
+  </nav>
+
+  <!-- BREADCRUMB -->
+  <div class="breadcrumb">
+    <a href="index.html">Inicio</a> / 
+    <a href="index.html#autos">Autos disponibles</a> / 
+    <span id="breadcrumbName">…</span>
+  </div>
+
+  <!-- LOADING FALLBACK -->
+  <div class="loading" id="loadingState">Cargando auto…</div>
+
+  <!-- DETALLE -->
+  <div class="detail-wrap" id="detailWrap" style="display:none;">
+
+    <!-- GALERÍA -->
+    <div>
+      <div class="gallery-main" id="galleryMain">
+      <span class="gallery-badge" id="galleryBadge">Nuevo</span>
+      </div>
+      <div class="gallery-thumbs" id="galleryThumbs">
+        <!-- Mínimo 3 thumbs de ejemplo -->
+        <div class="gallery-thumb">📷</div>
+        <div class="gallery-thumb">📷</div>
+        <div class="gallery-thumb">📷</div>
+        <div class="gallery-thumb">📷</div>
+      </div>
+
+      <!-- Descripción (bajo galería) -->
+      <div class="description-block" style="margin-top:40px;">
+        <h3 class="block-title">Descripción</h3>
+        <p class="description-text" id="carDesc">—</p>
+      </div>
+
+      <!-- Características -->
+      <div style="margin-top:40px;">
+        <h3 class="block-title">Equipamiento destacado</h3>
+        <div class="features-grid" id="featuresList"></div>
+      </div>
+
+      <!-- Ficha técnica completa -->
+      <div style="margin-top:40px;">
+        <h3 class="block-title">Ficha técnica</h3>
+        <table class="ficha-table" id="fichaTable"></table>
+      </div>
+    </div>
+
+    <!-- PANEL DERECHO -->
+    <div class="info-panel">
+      <p class="car-brand-label" id="carBrand">—</p>
+      <h1 class="car-full-name" id="carName">—</h1>
+      <span class="car-version-badge" id="carVersion">—</span>
+
+      <div class="price-block">
+        <p class="price-label">Precio de venta</p>
+        <div class="price-main" id="carPrice"><sup>$</sup>—</div>
+        <p class="price-hint">Precio en pesos chilenos · Consulta financiamiento</p>
+      </div>
+
+      <div class="specs-quick" id="specsQuick"></div>
+
+      <div class="cta-group">
+        <a href="#contacto" class="btn-primary">Consultar por este auto</a>
+        <a href="#contacto" class="btn-ghost">Agendar visita</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- AUTOS RELACIONADOS -->
+  <div class="related-section" id="relatedSection" style="display:none;">
+    <p class="section-label" style="font-size:11px;letter-spacing:4px;text-transform:uppercase;color:var(--accent);margin-bottom:12px;">También te puede interesar</p>
+    <h2 style="font-family:'Montserrat',sans-serif; font-weight: 800 ;font-size:40px;letter-spacing:1px;">Otros autos disponibles</h2>
+    <div class="related-grid" id="relatedGrid"></div>
+  </div>
+
+    <!-- ── CONTACTO ── -->
+  <section id="contacto">
+    <div class="lado-izq-contacto">
+      <div class="section-header">
+        <div>
+          <p class="section-label">Estamos aquí</p>
+          <h2 class="section-title">Contacto</h2>
+        </div>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-detail">
+            <div class="contact-icon">📍</div>
+            <div class="contact-text">
+              <strong>Dirección</strong>
+              Av. Lomas de la corneta 6969, Talca, Maule.
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-icon">📞</div>
+            <div class="contact-text">
+              <strong>Teléfono</strong>
+              +56 9 6969 6969
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-icon">✉️</div>
+            <div class="contact-text">
+              <strong>Email</strong>
+              peneparaum@nzor.cl
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-icon">🕐</div>
+            <div class="contact-text">
+              <strong>Horario</strong>
+              Todos los días hasta la hora del pico
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-icon"><i class="fa-brands fa-whatsapp"></i></div>
+            <div class="contact-text">
+              <strong>WhatsApp</strong>
+              <a href="https://api.whatsapp.com/send?phone=56986627070&text=Hola%2C%20necesito%20agendar%20una%20visita%20para%20lavar%20mi%20veh%C3%ADculo.%20" class="whatsapp-btn">
+                  <p>Escribenos dando click aquí!</p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="contact-form">
+      <div class="form-row">
+        <div class="form-group">
+          <label>Nombre</label>
+          <input type="text" placeholder="Tu nombre">
+        </div>
+        <div class="form-group">
+          <label>Teléfono</label>
+          <input type="tel" placeholder="+56 9 ···">
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" placeholder="tu@correo.cl">
+      </div>
+      <div class="form-group">
+        <label>¿En qué te podemos ayudar?</label>
+        <select>
+          <option>Consulta sobre un auto</option>
+          <option>Quiero vender mi auto</option>
+          <option>Financiamiento</option>
+          <option>Otro</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Mensaje</label>
+        <textarea placeholder="Cuéntanos más..."></textarea>
+      </div>
+      <button class="btn-submit">Enviar mensaje</button>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <span class="footer-copy">© 2026 AutoMotoras DUG · Todos los derechos reservados</span>
+    <div class="footer-links">
+      <a href="#">Términos y condiciones</a>
+      <a href="#">Política de privacidad</a>
+      <a href="https://www.instagram.com/carwash_talca/">Instagram</a>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+
+</body>
+</html>
